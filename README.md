@@ -1,5 +1,7 @@
 # Lambda Calculus in Rust
 
+> The physicist and the engineer are in a hot-air balloon. Soon, they find themselves lost in a canyon somewhere. They yell out for help: "Helllloooooo! Where are we?" 15 minutes later, they hear an echoing voice: "Helllloooooo! You're in a hot-air balloon!!" The physicist says, "That must have been a mathematician." The engineer asks, "Why do you say that?" The physicist replied: "The answer was absolutely correct, and it was utterly useless."
+
 Implementing a toy Lambda Calculus language with [chumsky](https://github.com/zesterer/chumsky) and Rust.
 
 ## References
