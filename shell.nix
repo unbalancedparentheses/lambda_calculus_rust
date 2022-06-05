@@ -6,6 +6,7 @@ let
 	direnv
 
 	rustc
+	wasmtime
   ];
 
   inputs = basePackages
