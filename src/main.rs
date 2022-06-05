@@ -58,7 +58,8 @@ fn parser() -> impl Parser<char, Expr, Error = Simple<char>> {
             .padded();
 
         let atom = int
-            .or(expr.delimited_by(just('('), just(')'))).padded();
+            .or(expr.delimited_by(just('('), just(')')))
+            .or(ident.map(Expr::Var));
 
         let op = |c| just(c).padded();
 
