@@ -1,4 +1,7 @@
 use chumsky::prelude::*;
+use std::io::stdin;
+use std::io::stdout;
+use std::io::Write;
 
 #[derive(Debug)]
 enum Expr {
@@ -26,7 +29,13 @@ enum Expr {
 }
 
 fn main() {
-    let src = std::fs::read_to_string(std::env::args().nth(1).unwrap()).unwrap();
+    //let src = std::fs::read_to_string(std::env::args().nth(1).unwrap()).unwrap();
+    loop {
+    print!("> ");
+    stdout().flush();
+    let mut src = String::new();
+    stdin().read_line(&mut src).unwrap();
+
 
     match parser().parse(src) {
         Ok(ast) => match eval(&ast) {
@@ -37,6 +46,7 @@ fn main() {
             .into_iter()
             .for_each(|e| println!("Parse error: {}", e)),
     }
+        }
 }
 
 fn parser() -> impl Parser<char, Expr, Error = Simple<char>> {
