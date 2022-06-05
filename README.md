@@ -6,6 +6,7 @@ Implementing a useless toy Lambda Calculus language with [chumsky](https://githu
 
 ## References
 - [Languages implemented in Rust](https://github.com/alilleybrinker/langs-in-rust)
+- [ pku-minic /first-step-rust](https://github.com/pku-minic/first-step-rust)
 - [Build your own shell in Rust](https://www.joshmcguigan.com/blog/build-your-own-shell-rust/)
 
 ### Backends
